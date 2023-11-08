@@ -1,3 +1,4 @@
+'use-strict'
 const Fastify = require('fastify')
 const app = Fastify()
 
