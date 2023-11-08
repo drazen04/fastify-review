@@ -1,6 +1,8 @@
 'use-strict'
 const Fastify = require('fastify')
-const app = Fastify()
+const app = Fastify({logger: { transport: {
+    target: 'pino-pretty'
+}}})
 
 async function run () {
     
@@ -17,6 +19,6 @@ async function run () {
 
     await app.listen({
         port: 8080
-    })
+    }).then(() => app.log.info('Server Started'))
 }
 run()
