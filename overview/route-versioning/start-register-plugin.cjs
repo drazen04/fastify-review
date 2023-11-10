@@ -74,7 +74,7 @@ app.register(async function(fastify, opts) {
 // callback example with error handling
 // app.register(function (fastify, opts, done) {
 //     fastify.log.info('Registering my second plugin')
-
+// 
 //     try {
 //         throw new Error('Something bad happen')
 //         done()
