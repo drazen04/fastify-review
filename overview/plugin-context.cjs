@@ -7,7 +7,6 @@ const app = Fastify({logger: { transport: {
 async function run () {
     
     app.register(function firstP (app, opts, next) {
-
         next()
     })
     app.register(async function secondP (app) {
