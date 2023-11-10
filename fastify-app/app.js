@@ -2,6 +2,8 @@
 
 const path = require('path')
 const AutoLoad = require('@fastify/autoload')
+const fastifyOverview = require('fastify-overview')
+const fastifyOverviewUI = require('fastify-overview-ui')
 const { options } = require('./config/server-option')
 
 module.exports = async function (fastify, opts) {
@@ -10,6 +12,9 @@ module.exports = async function (fastify, opts) {
     dir: path.join(__dirname, 'schemas'),
     indexPattern: /^loader.js$/i
   })
+
+  fastify.register(fastifyOverview, { exposeRoute: true })
+  fastify.register(fastifyOverviewUI)
 
   await fastify.register(require('./configs/config'))
   fastify.log.info('Configs correctly loaded %o', fastify.config)

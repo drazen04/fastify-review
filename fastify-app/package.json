@@ -28,6 +28,7 @@
     "fastify": "^4.0.0",
     "fastify-cli": "^5.8.0",
     "fastify-env": "^2.2.0",
+    "fastify-overview": "^3.6.0",
     "fastify-overview-ui": "^2.2.2",
     "fastify-plugin": "^4.5.1"
   },
